@@ -1,0 +1,30 @@
+:root { --ink:#12303b; --muted:#58717a; --paper:#ffffff; --line:#dce6e8; --ok:#147a48; --bad:#b3261e; --soft:#f4f9fa; }
+* { box-sizing:border-box; }
+body { margin:0; min-height:100vh; font-family:Arial, Helvetica, sans-serif; color:var(--ink); background:linear-gradient(180deg,#e7f1f4 0%,#fff8ef 52%,#e9f0dc 100%); }
+.shell { width:min(680px,calc(100% - 28px)); margin:0 auto; padding:38px 0 44px; text-align:center; }
+header { border-bottom:1px solid #6f8188; padding-bottom:18px; }
+.eyebrow { margin:0 0 8px; letter-spacing:.08em; font-weight:700; font-size:.8rem; }
+h1 { font-size:clamp(2rem,7vw,3.5rem); font-weight:400; letter-spacing:.035em; margin:0; text-transform:uppercase; }
+.subtitle { color:var(--muted); margin:12px auto 0; }
+.counter-card,.scanner-card,.result,.admin { background:rgba(255,255,255,.92); border:1px solid var(--line); border-radius:18px; box-shadow:0 12px 28px rgba(35,61,69,.10); }
+.counter-card { margin:22px auto; padding:20px; width:min(340px,100%); }
+.counter-card span { font-size:4.5rem; line-height:1; font-weight:700; }
+.counter-card p { margin:9px 0 0; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; font-size:.82rem; font-weight:700; }
+.scanner-card { padding:16px; }
+#reader { width:100%; overflow:hidden; border-radius:12px; background:var(--soft); }
+#reader video { border-radius:12px; }
+.helper { color:var(--muted); line-height:1.4; margin:14px 4px; }
+button { font:inherit; cursor:pointer; border-radius:10px; padding:12px 18px; font-weight:700; border:0; }
+.primary { background:var(--ink); color:white; min-width:190px; }
+.secondary { background:#eef2f3; color:var(--ink); }
+.result { margin-top:20px; padding:19px; }
+.result strong { font-size:clamp(1.7rem,7vw,2.6rem); }
+.result p { margin:8px 0 0; font-weight:600; }
+.result.valid { background:#e7f6ee; border-color:#9ed3b5; color:var(--ok); }
+.result.invalid { background:#fff0ef; border-color:#e6a8a4; color:var(--bad); }
+.result.neutral { background:#fff; }
+.admin { margin-top:22px; text-align:left; overflow:hidden; }
+summary { padding:15px 17px; cursor:pointer; font-weight:700; }
+.admin-content { padding:0 17px 17px; color:var(--muted); }
+.admin-content p { line-height:1.45; }
+@media (max-width:420px) { .shell { padding-top:24px; } .counter-card span { font-size:4rem; } }

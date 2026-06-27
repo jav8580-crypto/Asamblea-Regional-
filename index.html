@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acceso al escenario</title>
+  <link rel="preconnect" href="https://unpkg.com">
+  <script src="https://unpkg.com/html5-qrcode" defer></script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <p class="eyebrow">ASAMBLEA REGIONAL 2026</p>
+      <h1>Acceso al escenario</h1>
+      <p class="subtitle">Escanee el código QR para verificar el acceso.</p>
+    </header>
+
+    <section class="counter-card" aria-live="polite">
+      <span id="access-count">0</span>
+      <p>Acceso total</p>
+    </section>
+
+    <section class="scanner-card">
+      <div id="reader"></div>
+      <p id="scanner-message" class="helper">Permita el acceso a la cámara y enfoque el código QR.</p>
+      <button id="start-button" class="primary">Iniciar escáner</button>
+    </section>
+
+    <section id="result" class="result neutral" aria-live="assertive">
+      <strong id="result-title">LISTO</strong>
+      <p id="result-message">Esperando un código QR.</p>
+    </section>
+
+    <details class="admin">
+      <summary>Administrador</summary>
+      <div class="admin-content">
+        <p>El contador se guarda en este dispositivo. Úselo en el teléfono o tableta que estará escaneando los códigos.</p>
+        <button id="reset-button" class="secondary">Reiniciar contador</button>
+      </div>
+    </details>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
